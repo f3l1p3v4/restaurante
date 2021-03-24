@@ -18,10 +18,10 @@
             loading="lazy"
           />
         </figure>
-        <h3>{{ data.bus }}</h3>
-        <span>{{ data.categorie }}</span>
+        <h3>{{ data.name }}</h3>
+        <span>{{ data.ingredients }}</span>
         <br />
-        <span class="price">R$ {{ data.group }}</span>
+        <span class="price">R$ {{ data.price }}</span>
         <br />
       </div>
       <form>
@@ -38,7 +38,7 @@
             }
           "
         >
-          Adicionar<br />R${{ computedPrice(data.preco) }}
+          Adicionar<br />R${{ computedPrice(data.price) }}
         </button>
       </form>
     </section>

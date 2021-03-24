@@ -1,7 +1,7 @@
 <template>
   <div class="card-container">
     <ul>
-      <li class="card" v-for="item in items" :key="item.bus" :item="item">
+      <li class="card" v-for="item in items" :key="item._id" :item="item">
         <img
           @click.prevent="openPopUp(item)"
           src="https://diariodoturismo.com.br/wp-content/uploads/2020/11/Margheritta-pizza-11-2020.jpg"
@@ -10,11 +10,11 @@
         <div
           @click.prevent="openPopUp(item)"
         >
-          <h3>{{ item.bus }}</h3>
+          <h3>{{ item.name }}</h3>
           <span>
-            {{ item.categorie }}
+            {{ item.ingredients }}
           </span>
-          <span> Grande: R${{ item.group }} </span>
+          <span> Grande: R${{ item.price }} </span>
         </div>
         <a href="genereteMessage">
           <span>Pedir Essa</span>
