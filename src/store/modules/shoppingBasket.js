@@ -17,13 +17,13 @@ export default {
       let { item, quantity } = data;
       quantity = parseInt(quantity);
 
-      if (state.shoppingBasket.has(item?.nome)) {
-        quantity += state.shoppingBasket.get(item?.nome).quantity;
-        state.shoppingBasket.set(item?.nome, { item, quantity });
+      if (state.shoppingBasket.has(item?.name)) {
+        quantity += state.shoppingBasket.get(item?.name).quantity;
+        state.shoppingBasket.set(item?.name, { item, quantity });
 
         await LocalStorage.updateAll(state.setting, state.shoppingBasket);
       } else {
-        state.shoppingBasket.set(item?.nome, { item, quantity });
+        state.shoppingBasket.set(item?.name, { item, quantity });
         await LocalStorage.updateAll(state.setting, state.shoppingBasket);
       }
 
