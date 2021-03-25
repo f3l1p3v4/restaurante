@@ -7,9 +7,7 @@
           src="https://diariodoturismo.com.br/wp-content/uploads/2020/11/Margheritta-pizza-11-2020.jpg"
           loading="lazy"
         />
-        <div
-          @click.prevent="openPopUp(item)"
-        >
+        <div @click.prevent="openPopUp(item)">
           <h3>{{ item.name }}</h3>
           <span>
             {{ item.ingredients }}
@@ -111,7 +109,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  align-items: center;
   background-color: var(--_color_2);
   color: var(--_color_0);
   text-transform: uppercase;
