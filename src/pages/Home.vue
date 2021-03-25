@@ -8,14 +8,16 @@
           <PopUp />
         </div>
       </section>
+      <section v-show="isEmpty">
+        <Loading />
+      </section>
     </Container>
     <Footer />
   </main>
 </template>
-
 <script>
 import { mapMutations, mapState } from "vuex";
-import { Header, Container, Card, Footer, PopUp } from "@/components";
+import { Card, Container, Footer, Header, PopUp, Loading } from "@/components";
 
 export default {
   components: {
@@ -24,6 +26,7 @@ export default {
     Footer,
     Header,
     PopUp,
+    Loading,
   },
 
   computed: {
@@ -33,6 +36,10 @@ export default {
 
   methods: {
     ...mapMutations("popUp", ["openPopUp"]),
+  },
+
+  mounted() {
+    alert(this.isEmpty);
   },
 };
 </script>
