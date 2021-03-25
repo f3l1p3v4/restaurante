@@ -37,10 +37,6 @@ export default {
   methods: {
     ...mapMutations("popUp", ["openPopUp"]),
   },
-
-  mounted() {
-    alert(this.isEmpty);
-  },
 };
 </script>
 

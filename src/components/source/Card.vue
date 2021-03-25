@@ -4,6 +4,7 @@
       <li class="card" v-for="item in items" :key="item._id" :item="item">
         <img
           @click.prevent="openPopUp(item)"
+          style="border-radius: 80%"
           src="https://diariodoturismo.com.br/wp-content/uploads/2020/11/Margheritta-pizza-11-2020.jpg"
           loading="lazy"
         />

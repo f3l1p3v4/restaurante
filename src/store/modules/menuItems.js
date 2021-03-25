@@ -11,10 +11,10 @@ export default {
   mutations: {},
 
   actions: {
-    async ["loadData"]({ state }) {
+    async loadData({ state }) {
       state.items = await api.get("/all").then((response) => response.data);
 
-      state.isEmpty = !!state.items.length;
+      state.isEmpty = state.items.length > 1 ? false : true;
     }
   },
   gettets: {}

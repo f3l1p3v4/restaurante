@@ -17,7 +17,9 @@
         <li v-for="item in shoppingBasket" :key="item[0]">
           <div>
             <h2>{{ item[0] }}</h2>
-            <span>R$ {{ item[1].item.price }}</span>
+            <span
+              >R${{ computedPrice(item[1].item.price, item[1].quantity) }}</span
+            >
           </div>
           <div class="action">
             <strong style="padding: 0 10px">Qtd: {{ item[1].quantity }}</strong>
@@ -25,7 +27,9 @@
           </div>
         </li>
         <div class="price">
-          <span><strong>Valor:</strong> R$ 20,00</span>
+          <span
+            ><strong>Valor:</strong> R$ 20</span
+          >
         </div>
       </ul>
       <div v-else class="empty-message">
@@ -53,6 +57,10 @@ export default {
   methods: {
     ...mapActions("shoppingBasket", ["loadShoppingBasket"]),
     ...mapMutations("shoppingBasket", ["removeAll"]),
+
+    computedPrice(price, qtd) {
+      return (parseFloat(price) * qtd).toFixed(2);
+    },
   },
 
   computed: {

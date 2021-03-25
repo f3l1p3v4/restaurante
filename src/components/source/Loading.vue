@@ -1,3 +1,9 @@
+<template>
+  <div class="pizza">
+    <div class="pepperoni"></div>
+  </div>
+</template>
+
 <style scoped>
 .pizza {
   position: fixed;
@@ -15,7 +21,7 @@
 }
 
 .pizza:before {
-  content: "";
+  content: '';
   position: absolute;
   margin: auto;
   top: 0;
@@ -29,7 +35,7 @@
 }
 
 .pizza:after {
-  content: "";
+  content: '';
   position: absolute;
   margin: auto;
   top: 0;
@@ -54,10 +60,18 @@
   width: 25px;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: -80px -60px 0 0 #C4272C, 0 -75px 0 0 #C4272C,
-    -40px -30px 0 0 #C4272C, -80px -60px 0 0 #C4272C, 80px -40px 0 0 #C4272C,
-    -60px 30px 0 0 #C4272C, 60px 30px 0 0 #C4272C, -30px 80px 0 0 #C4272C,
-    20px 20px 0 0 #C4272C, 30px 78px 0 0 #C4272C, 35px -30px 0 0 #C4272C;
+  box-shadow: 
+    -80px -60px 0 0 #C4272C,
+    0 -75px 0 0 #C4272C,
+    -40px -30px 0 0 #C4272C,
+    -80px -60px 0 0 #C4272C,
+    80px -40px 0 0 #C4272C,
+    -60px 30px 0 0 #C4272C,
+    60px 30px 0 0 #C4272C,
+    -30px 80px 0 0 #C4272C,
+    20px 20px 0 0 #C4272C,
+    30px 78px 0 0 #C4272C,
+    35px -30px 0 0 #C4272C;
 }
 
 .mushrooms {
@@ -72,14 +86,22 @@
   width: 30px;
   border-radius: 10px;
   background-color: tranparent;
-  box-shadow: -80px -60px 0 0 #4C5B5C, 0 -75px 0 0 #4C5B5C,
-    -40px -30px 0 0 #4C5B5C, -80px -60px 0 0 #4C5B5C, 80px -40px 0 0 #4C5B5C,
-    -60px 30px 0 0 #4C5B5C, 60px 30px 0 0 #4C5B5C, -30px 80px 0 0 #4C5B5C,
-    20px 20px 0 0 #4C5B5C, 30px 78px 0 0 #4C5B5C, 35px -30px 0 0 #4C5B5C;
+  box-shadow: 
+    -80px -60px 0 0 #4C5B5C,
+    0 -75px 0 0 #4C5B5C,
+    -40px -30px 0 0 #4C5B5C,
+    -80px -60px 0 0 #4C5B5C,
+    80px -40px 0 0 #4C5B5C,
+    -60px 30px 0 0 #4C5B5C,
+    60px 30px 0 0 #4C5B5C,
+    -30px 80px 0 0 #4C5B5C,
+    20px 20px 0 0 #4C5B5C,
+    30px 78px 0 0 #4C5B5C,
+    35px -30px 0 0 #4C5B5C;
 }
 
 .mushrooms:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 15px;
   left: 0;
@@ -89,11 +111,19 @@
   height: 20px;
   width: 15px;
   background-color: transparent;
-  z-index: 15;
-  box-shadow: -80px -60px 0 0 #4C5B5C, 0 -75px 0 0 #4C5B5C,
-    -40px -30px 0 0 #4C5B5C, -80px -60px 0 0 #4C5B5C, 80px -40px 0 0 #4C5B5C,
-    -60px 30px 0 0 #4C5B5C, 60px 30px 0 0 #4C5B5C, -30px 80px 0 0 #4C5B5C,
-    20px 20px 0 0 #4C5B5C, 30px 78px 0 0 #4C5B5C, 35px -30px 0 0 #4C5B5C;
+  z-index:15;
+  box-shadow: 
+    -80px -60px 0 0 #4C5B5C,
+    0 -75px 0 0 #4C5B5C,
+    -40px -30px 0 0 #4C5B5C,
+    -80px -60px 0 0 #4C5B5C,
+    80px -40px 0 0 #4C5B5C,
+    -60px 30px 0 0 #4C5B5C,
+    60px 30px 0 0 #4C5B5C,
+    -30px 80px 0 0 #4C5B5C,
+    20px 20px 0 0 #4C5B5C,
+    30px 78px 0 0 #4C5B5C,
+    35px -30px 0 0 #4C5B5C;
 }
 
 @keyframes spin {
@@ -101,4 +131,5 @@
     transform: rotate(360deg);
   }
 }
+
 </style>
