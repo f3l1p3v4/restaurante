@@ -34,6 +34,7 @@ export default {
   display: flex;
   color: var(--_color_0);
   align-self: center;
+  font-size: 0.5em;
 }
 
 #footer div:nth-child(1) {

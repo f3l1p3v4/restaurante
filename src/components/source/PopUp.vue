@@ -9,7 +9,7 @@
         <figure>
           <img
             draggable="false"
-            src="https://diariodoturismo.com.br/wp-content/uploads/2020/11/Margheritta-pizza-11-2020.jpg"
+            src="https://static.expressodelivery.com.br/imagens/produtos/134/180/Expresso-Delivery_7c4e01b23ec688f6db2a3aee2ac4cc88.png"
             loading="lazy"
           />
           <img
@@ -101,7 +101,7 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  padding: 15px;
+  padding: 20px;
   color: var(--_color_0);
   flex-direction: column;
   left: 50%;
@@ -110,6 +110,12 @@ export default {
   padding-bottom: 20px;
   box-shadow: 2px 4px 20px 2px var(--_color_6);
   z-index: 2;
+}
+
+@media only screen and (max-width: 450px) {
+  .pop-info {
+    border-radius: 0;
+  }
 }
 
 .pop-info header {

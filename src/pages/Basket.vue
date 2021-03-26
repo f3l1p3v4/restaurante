@@ -95,6 +95,13 @@ export default {
 #body-basket main {
   overflow-y: auto;
   padding: 30px;
+  background-color: var(--_color_0)
+}
+
+@media only screen and (max-width: 450px) {
+  #body-basket main {
+    padding: 10px;
+  }
 }
 
 #body-basket main button {
@@ -116,6 +123,13 @@ export default {
   border-radius: 8px;
   padding: 10px 20px 20px;
   color: rgb(40, 40, 40);
+}
+
+@media only screen and (max-width: 450px) {
+  #body-basket main ul {
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
 #body-basket main ul li {
@@ -172,6 +186,12 @@ export default {
   align-items: center;
   text-align: center;
   width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  #header-basket div div h1 {
+    font-size: 18pt;
+  }
 }
 
 .basket-icon {

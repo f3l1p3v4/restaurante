@@ -4,11 +4,14 @@
       <li class="card" v-for="item in items" :key="item._id" :item="item">
         <img
           @click.prevent="openPopUp(item)"
-          style="border-radius: 80%"
-          src="https://diariodoturismo.com.br/wp-content/uploads/2020/11/Margheritta-pizza-11-2020.jpg"
+          style="border-radius: 80%; margin-left: 10px;"
+          src="https://static.expressodelivery.com.br/imagens/produtos/134/180/Expresso-Delivery_7c4e01b23ec688f6db2a3aee2ac4cc88.png"
           loading="lazy"
         />
-        <div @click.prevent="openPopUp(item)">
+        <div 
+          @click.prevent="openPopUp(item)"
+          style="padding-left: 10px;"
+        >
           <h3>{{ item.name }}</h3>
           <span>
             {{ item.ingredients }}
@@ -16,8 +19,8 @@
           <span> Grande: R${{ item.price }} </span>
         </div>
         <a href="genereteMessage">
-          <span>Pedir Essa</span>
           <WhatsappIcon></WhatsappIcon>
+          <span>Pedir</span>
         </a>
       </li>
     </ul>
@@ -71,10 +74,16 @@ export default {
 
 .card div:nth-child(2) {
   margin: 0 10px;
-  padding: 10px 0;
+  padding: 10px 0 0;
   display: grid;
-  min-height: 100px;
+  min-height: 90px;
   grid-template-rows: 30% 50% 20%;
+}
+
+@media only screen and (max-width: 450px) {
+  .card div:nth-child(2) {
+    grid-template-rows: 30% 30% 20%;
+  }
 }
 
 .card div:nth-child(2) h3 {
@@ -87,12 +96,25 @@ export default {
   direction: ltr;
 }
 
+@media only screen and (max-width: 450px) {
+  .card div:nth-child(2) h3 {
+    font-size: 1.2em;
+  }
+}
+
 .card div:nth-child(2) span:nth-child(2) {
   color: var(--_color_5);
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   font-style: italic;
   font-size: 1em;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 450px) {
+  .card div:nth-child(2) span:nth-child(2) {
+    font-size: 0.7em;
+  }
 }
 
 .card div:nth-child(2) span:nth-child(3) {
@@ -133,6 +155,16 @@ export default {
   font-size: 30pt;
 }
 
+@media only screen and (max-width: 450px) {
+  .card a:nth-child(3) span {
+    font-size: 7pt;
+  }
+
+  .card a:nth-child(3) svg {
+    font-size: 20pt;
+  }
+}
+
 .card a:active {
   background-color: var(--_color_2_1);
 }
@@ -152,14 +184,14 @@ export default {
   }
 }
 
-@media only screen and (max-width: 320px) {
-  /*.card div:nth-child(2) h3 {
+@media only screen and (max-width: 420px) {
+  .card div:nth-child(2) h3 {
     font-size: 1.1em;
-  }*/
+  }
 
   .card div:nth-child(2) span:nth-child(3) {
     padding: 10px 0px;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 </style>
